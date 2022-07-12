@@ -65,7 +65,7 @@
             text-align: center;
         }
 
-        .footer .mail{
+        .footer .mail {
             display: inline-block;
             color: #aaa;
             line-height: 1.5em;
@@ -94,10 +94,18 @@
             display: inline-block;
             margin: 20px 0 0 0;
         }
-        .tip{
+
+        .header .avatar {
+            height: 30px;
+            border-radius: 8px;
+            margin-bottom: -2px;
+        }
+
+        .tip {
             font-size: 12px;
             color: #aaa;
         }
+
         /* chrome滚动条 */
         ::-webkit-scrollbar {
             width: 8px;
@@ -135,7 +143,11 @@
 <div id="main" class="main" style="">
     <hand-drawn-pad style="margin:auto;" roughops='{"fill":"#dddddd","fillStyle": "cross-hatch"}' realtimeresize>
         <div class="header">
-            <hand-drawn-anchor href="###" linecolor="#666"><h1 class="title">MissThee</h1></hand-drawn-anchor>
+            <hand-drawn-anchor href="###" linecolor="#666">
+                <h1 class="title">MissThee</h1>
+                <img src="assets/img/avatar.jpg" alt="avatar" class="avatar"/>
+
+            </hand-drawn-anchor>
             <div class="github">
                 <a href="https://github.com/MissThee" target="_blank">
                     <hand-drawn-button roughops='{"fill":"#409EFF","fillWeight":"0.1"}'>GitHub</hand-drawn-button>
@@ -197,18 +209,6 @@
     ]
 
     function createCard(title, description, href, img) {
-        // <div class="item">
-        //     <a href="https://missthee.github.io/threejs-minecraft/dist/index.html" target="_blank">
-        //         <hand-drawn-pad class="pic-pad">
-        //             <img src="assets/img/THREE.JS MINECRAFT.png" alt="">
-        //         </hand-drawn-pad>
-        //         <div>
-        //             <span>three.js我的世界</span>
-        //             <span> - </span>
-        //             <span> – three.js构建的简易我的世界静态页</span>
-        //         </div>
-        //     </a>
-        // </div>
         const itemEl = document.createElement('div')
         itemEl.style.display = 'inline-block'
         itemEl.style.verticalAlign = 'top'
@@ -233,10 +233,11 @@
         const descriptionEl = document.createElement('span')
         descriptionEl.innerText = description
 
-        itemEl.append(anchorEl)
-        anchorEl.append(picPadEl, textWrapperEl)
         picPadEl.append(imgEl)
         textWrapperEl.append(titleEl, splitEl, descriptionEl)
+        anchorEl.append(picPadEl, textWrapperEl)
+        itemEl.append(anchorEl)
+
         return itemEl
     }
 
@@ -253,6 +254,7 @@
 </script>
 
 
-  <script src="index.js"></script></body>
+<script src="index.js"></script>
+</body>
 </html>
 
