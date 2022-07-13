@@ -1053,63 +1053,63 @@ HandDrawnAnchor = __decorateClass([
   n$1("hand-drawn-anchor")
 ], HandDrawnAnchor);
 
-const loadFonts = async (fontFamily, fontSrc) => {
-  const font = new FontFace(fontFamily, `url(${fontSrc})`);
-  const loadFontFace = await font.load();
-  document.fonts.add(loadFontFace);
-  return loadFontFace;
-};
-const setFont = (fontInfoArray) => {
-  let fontFamilyStr = "";
-  for (let fontInfo of fontInfoArray) {
-    fontFamilyStr += "'" + fontInfo.fontFamily + "',";
-    if (fontInfo.fontFamily && fontInfo.fontSrc) {
-      loadFonts(fontInfo.fontFamily, fontInfo.fontSrc).then(() => {
-        var _a;
-        (_a = fontInfo.loaded) == null ? void 0 : _a.call(void 0);
-      });
-    }
-  }
-  if (fontFamilyStr) {
-    document.body.style.fontFamily = fontFamilyStr.substr(0, fontFamilyStr.length - 1);
-  }
-};
-
-window.onload = function() {
-  const loading = document.getElementById("loading");
-  const loadingText = document.getElementById("loadingText");
-  const main = document.getElementById("main");
-  main.style.transition = "opacity 1.2s ease-out";
-  main.style.opacity = "0";
-  loadingText.style.transformOrigin = "50% 50%";
-  loadingText.style.transition = "all 1s ease-out";
-  Promise.all([
-    new Promise((resolve) => {
-      setTimeout(() => {
-        resolve();
-      }, 500);
-    }),
-    new Promise((resolve) => {
-      setFont([
-        {
-          fontFamily: "comic",
-          fontSrc: "./assets/font/comic.ttf",
-          loaded: () => {
-            resolve();
-          }
-        },
-        { fontFamily: "FZMWFont", fontSrc: "./assets/font/FZMWFont.ttf" }
-      ]);
-    })
-  ]).then(() => {
-    loadingText.innerText = "Done";
-    loadingText.style.opacity = "0";
-    loadingText.style.transform = "scale(2)";
-    setTimeout(() => {
-      main.style.opacity = "1";
-      setTimeout(() => {
-        loading.style.display = "none";
-      }, 1e3);
-    }, 1e3);
-  });
-};
+// const loadFonts = async (fontFamily, fontSrc) => {
+//   const font = new FontFace(fontFamily, `url(${fontSrc})`);
+//   const loadFontFace = await font.load();
+//   document.fonts.add(loadFontFace);
+//   return loadFontFace;
+// };
+// const setFont = (fontInfoArray) => {
+//   let fontFamilyStr = "";
+//   for (let fontInfo of fontInfoArray) {
+//     fontFamilyStr += "'" + fontInfo.fontFamily + "',";
+//     if (fontInfo.fontFamily && fontInfo.fontSrc) {
+//       loadFonts(fontInfo.fontFamily, fontInfo.fontSrc).then(() => {
+//         var _a;
+//         (_a = fontInfo.loaded) == null ? void 0 : _a.call(void 0);
+//       });
+//     }
+//   }
+//   if (fontFamilyStr) {
+//     document.body.style.fontFamily = fontFamilyStr.substr(0, fontFamilyStr.length - 1);
+//   }
+// };
+//
+// window.onload = function() {
+//   const loading = document.getElementById("loading");
+//   const loadingText = document.getElementById("loadingText");
+//   const main = document.getElementById("main");
+//   main.style.transition = "opacity 1.2s ease-out";
+//   main.style.opacity = "0";
+//   loadingText.style.transformOrigin = "50% 50%";
+//   loadingText.style.transition = "all 1s ease-out";
+//   Promise.all([
+//     new Promise((resolve) => {
+//       setTimeout(() => {
+//         resolve();
+//       }, 500);
+//     }),
+//     new Promise((resolve) => {
+//       setFont([
+//         {
+//           fontFamily: "comic",
+//           fontSrc: "./assets/font/comic.ttf",
+//           loaded: () => {
+//             resolve();
+//           }
+//         },
+//         { fontFamily: "FZMWFont", fontSrc: "./assets/font/FZMWFontPart.ttf" }
+//       ]);
+//     })
+//   ]).then(() => {
+//     loadingText.innerText = "Done";
+//     loadingText.style.opacity = "0";
+//     loadingText.style.transform = "scale(2)";
+//     setTimeout(() => {
+//       main.style.opacity = "1";
+//       setTimeout(() => {
+//         loading.style.display = "none";
+//       }, 1e3);
+//     }, 1e3);
+//   });
+// };

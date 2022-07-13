@@ -18,7 +18,7 @@
         @font-face {
             font-family: 'FZMWFont';
             font-display: swap;
-            src: url('assets/font/FZMWFont.ttf');
+            src: url('assets/font/FZMWFontPart.ttf');
         }
 
         @font-face {
@@ -48,7 +48,7 @@
 
         .main {
             transition: opacity 1.2s;
-            opacity: 0;
+            /*opacity: 0;*/
             max-width: 600px;
             margin: auto;
             padding: 8px;
@@ -136,9 +136,9 @@
     </style>
 </head>
 <body>
-<div id="loading" style="position: fixed;left: 50%;top:40%;transform: translate(-50%,-50%);display: inline-block;pointer-events: none">
-    <div id="loadingText" style="font-size: 3em;color: #999;pointer-events: none">loading...</div>
-</div>
+<!--<div id="loading" style="position: fixed;left: 50%;top:40%;transform: translate(-50%,-50%);display: inline-block;pointer-events: none">-->
+<!--    <div id="loadingText" style="font-size: 3em;color: #999;pointer-events: none">loading...</div>-->
+<!--</div>-->
 
 <div id="main" class="main" style="">
     <hand-drawn-pad style="margin:auto;" roughops='{"fill":"#dddddd","fillStyle": "cross-hatch"}' realtimeresize>
@@ -247,10 +247,6 @@
             contentEl.append(createCard(data.title, data.description, data.href, data.img))
         })
     })(contentDataList)
-
-    function dialogSvgShowHandler() {
-        document.getElementById('dialogSvg').visible = true
-    }
 </script>
 
 
