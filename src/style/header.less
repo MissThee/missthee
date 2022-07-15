@@ -1,0 +1,58 @@
+.header {
+  position: relative;
+  margin: auto;
+  height: 50px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+
+  .left {
+    display: inline-flex;
+    align-items: center;
+
+    .name {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid gray;
+      border-radius: 8px;
+      height: 30px;
+
+      .title {
+        display: inline-block;
+        color: #333;
+        font-size: 22px;
+        padding: 0 5px;
+      }
+
+      .avatar {
+        height: 100%;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .right {
+    flex: 1;
+    text-align: right;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    & > div {
+      border: 1px solid gray;
+      border-radius: 8px;
+      padding: 5px;
+    }
+
+    .github {
+      display: inline-block;
+
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+
+    }
+  }
+
+}

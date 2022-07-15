@@ -60,7 +60,7 @@ function createCard(title: string, description: string, href: string, img: strin
     titleEl.className = 'title'
     const descriptionEl = document.createElement('div')
     descriptionEl.innerText = description
-    descriptionEl.className = ' description'
+    descriptionEl.className = 'description'
 
     anchorEl.append(imgEl, titleEl, descriptionEl)
     itemEl.append(anchorEl)
@@ -74,6 +74,6 @@ function createCard(title: string, description: string, href: string, img: strin
         contentEl?.append(createCard(data.title, data.description, data.href, data.img))
     })
     console.log(contentEl?.innerHTML)
-
 })(contentDataList)
+
 export {}

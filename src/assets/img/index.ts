@@ -7,7 +7,7 @@ import simpleDeploy from './simpleDeploy.png'
 import tableCellEdit from './tableCellEdit.png'
 import threeJsMinecraft from './threeJsMinecraft.png'
 import vueElementUiSample from './vueElementUiSample.png'
-
+import paperBg from './paperBg.gif'
 export {
     avatar,
     githubFileTree,
@@ -18,4 +18,5 @@ export {
     tableCellEdit,
     threeJsMinecraft,
     vueElementUiSample,
+    paperBg
 }
