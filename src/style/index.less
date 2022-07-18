@@ -1,9 +1,18 @@
 @import './global';
 
+body {
+  background-image: url("src/assets/img/paperBg.gif");
+  cursor: url("src/assets/cursor/Arrow.cur"), default;
+}
+
+a:hover {
+  cursor: url("src/assets/cursor/Hand.cur"), pointer;
+}
+
 .main {
   max-width: 600px;
   margin: auto;
-  background-image: url("src/assets/img/paperBg.gif");
+
 
   @import "./header";
   @import "./content";

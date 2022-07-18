@@ -8,8 +8,9 @@
     margin: 0 auto 40px;
     width: 400px;
     overflow: hidden;
-    transition: border ease-out 0s;
-    border: 1px solid transparent;
+    border: 1px solid #999;
+    border-radius: 8px;
+    background-color: #fafafa;
 
     .img {
       width: 100%;
@@ -17,82 +18,24 @@
     }
 
     .title {
-      transition: border ease-out 0s;
-      border-top: 1px solid transparent;
+      //border-top: 1px solid #bbb;
+      border-radius: 8px;
+      color: #999;
+
+      &::before {
+        content: '';
+        display: block;
+        margin: auto;
+        width: 97%;
+        height: 1px;
+        border-bottom: 1px solid #999;
+      }
     }
 
     .description {
-
+      color: #999
     }
   }
 
-  // 字颜色和下划线
-  &--type-1 {
-    .info-card {
-      transition: all ease-out 0.3s;
 
-      * {
-        text-decoration-color: transparent;
-      }
-
-      .title {
-        color: #333;
-      }
-
-      .description {
-        color: #333;
-      }
-    }
-  }
-
-  // 边框出现
-  &--type-2 {
-    .info-card {
-      border: 1px solid gray;
-
-      .title {
-        transition: border ease-out 0.3s;
-        border-top: 1px solid gray;
-      }
-    }
-  }
-
-  // 边框圆角
-  &--type-3 {
-    .info-card {
-      border-radius: 8px;
-    }
-  }
-
-  // 卡片阴影
-  &--type-4 {
-    .info-card {
-      border-bottom-width: 2px;
-      border-bottom-color: #aaa;
-      border-right-width: 2px;
-      border-right-color: #aaa;
-      transition: all ease-out 0.3s;
-      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    }
-  }
-
-  // 悬浮效果
-  &--type-5 {
-    .info-card {
-      transition: all ease-out 0.2s;
-      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-
-      &:hover {
-        transition: opacity ease-out 0.2s, box-shadow ease-out 0.2s, transform ease-out 0.2s;
-        transform: translate(-1px, -1px);
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
-      }
-
-      &:active {
-        transition: opacity ease-out 0s, box-shadow ease-out 0s, transform ease-out 0s;
-        transform: translate(0, -1px);
-        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-      }
-    }
-  }
 }
