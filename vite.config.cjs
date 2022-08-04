@@ -1,6 +1,7 @@
 import {defineConfig} from 'vite'
 import path from 'path';
-
+// import TestVitePlugin from './plugin/TestVitePlugin'
+import Inspect from 'vite-plugin-inspect'
 export default defineConfig({
     base: './',
     server: {
@@ -12,6 +13,10 @@ export default defineConfig({
             src: path.resolve(__dirname, './src')
         }
     },
+    plugins: [
+        Inspect(),
+        // TestVitePlugin(),
+    ],
     build: {
         outDir: 'docs', // 配合github静态页的导出目录
         assetsInlineLimit: 0,
