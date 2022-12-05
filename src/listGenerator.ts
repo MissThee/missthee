@@ -10,7 +10,7 @@ const contentDataList = [
     {
         title: '手绘风格UI组件',
         description: 'lit-element、rough.js构建手绘风格组件',
-        href: 'https://missthee.com/hand-drawn-component/dist/index.html',
+        href: 'https://missthee.github.io/hand-drawn-component/dist/index.html',
         img: Assets.handDrawnComponent
     },
     {
