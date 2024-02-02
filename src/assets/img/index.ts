@@ -7,6 +7,8 @@ import simpleDeploy from './simpleDeploy.png'
 import tableCellEdit from './tableCellEdit.png'
 import threeJsMinecraft from './threeJsMinecraft.png'
 import vueElementUiSample from './vueElementUiSample.png'
+import comicMessage from './comicMessage.gif'
+
 import paperBg from './paperBg.gif'
 export {
     avatar,
@@ -18,5 +20,6 @@ export {
     tableCellEdit,
     threeJsMinecraft,
     vueElementUiSample,
+    comicMessage,
     paperBg
 }

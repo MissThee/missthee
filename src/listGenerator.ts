@@ -2,6 +2,12 @@ import * as Assets from './assets/img'
 
 const contentDataList = [
     {
+        title: '漫画消息',
+        description: '生成漫画风格消息gif动图',
+        href: 'https://missthee.github.io/comic-message/',
+        img: Assets.comicMessage
+    },
+    {
         title: 'three.js我的世界',
         description: 'three.js构建的简易我的世界静态页',
         href: 'https://missthee.github.io/threejs-minecraft/index.html',
